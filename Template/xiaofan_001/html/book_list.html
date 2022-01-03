@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="http://www.91king.xyz/Template/xiaofan_001/images/logo.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-transform " />
+<title>{9CCMS-Book-List:Title} - {9CCMS:$WebTitle}</title>
+<meta name="keywords" content="{9CCMS-Book-List:Title}">
+<meta name="description" content="{9CCMS-Book-List:Title}">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+<script src="{9CCMS:$StylePath}/js/jquery.min.js"></script>
+<script src="{9CCMS:$StylePath}/js/owl.carousel.min.js"></script>
+<link href="{9CCMS:$StylePath}/css/msvod.css" rel="stylesheet" type="text/css">
+</head>
+{9CCMS-include:Header}
+<div class="main">
+<div class="panel panel-default">
+<div class="panel-head"><div class="f-r lh40">共有小说<span class="f20 colordef"> x</span> 部</div>
+<h2 class="f-l f18 colordef panel-title">{9CCMS-Book-List:Title}</h2><span class="lh40 colorgray"></span>
+</div>
+
+<div class="panel-body">
+<ul class="panel-list">
+ 
+ {9CCMS-Book-List:Count=32}
+ <li class="video last">
+<a href="{9CCMS-Book-List:DUrl}" target="_blank" title="{9CCMS-Book-List:Name}">
+<div class="thumb"><img src="{9CCMS-Book-List:Pic}" alt="{9CCMS-Book-List:Name}" /></div>
+<h2 class="f16 video-title product-buyer-name">{9CCMS-Book-List:Name}.</h2>
+<div class="f12 video-details">
+
+<div class="video-details-2">
+<span class="f-l fa fa-clock-o"> {9CCMS:$Time}</span>
+<span class="f-r fa fa-eye"> 已被阅读：{9CCMS-Book-List:Rand} 次</span>
+</div>
+</div>
+</a>
+</li>
+{/9CCMS-Book-List}
+</ul>
+</div>
+<div class="text-center pages">
+<ul class="pagination">
+<li><a href="{9CCMS-Book-List:prevUrl}" >上一页</a></li>
+<li><a href="{9CCMS-Book-List:PageUrl}" > 首页 </a></li>
+<li><a href="{9CCMS-Book-List:totalUrl}">尾页</a></li>
+<li class="pagecur"><a href="{9CCMS-Book-List:nextUrl}">下一页</a></li>
+<div style="height:17px;"></div>
+</div>
+</div>
+<!--<div class="bk30"></div>-->
+{9CCMS-include:Footer}
+</html>
