@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>广告</title>
+    <script src="js/jQuery.js"></script>
+    <script src="js/cookie.js"></script>
+</head>
+<style type="text/css">
+body{
+	margin: 0;
+}
+.advpic{
+	position: fixed;
+    width: 100%;
+    top: 6%;
+}
+.bg_img{
+    background: url(../GongGao/img/bg1.png) no-repeat;
+    width: 325px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    background-size: cover;
+}
+.closebtn{
+	position: absolute;
+    bottom: 0%;
+    left: 43.5%;
+    width: 15%;
+}
+.closebtn.closebtn_two{
+	position: absolute;
+    bottom: -14%;
+    left: 43.5%;
+    width: 15%;
+}
+.closebtn img{
+	width: 100%;
+}
+.advertising_text_one{
+    width: 55%;
+    padding-top: 50%;
+    margin:  0 auto;
+}
+.advertising_text_two{
+	width: 65%;
+    padding-top: 27%;
+    margin: 0 auto;
+}
+
+.advertising_text_one h3,.advertising_text_two h3{
+	text-align: center;
+}
+
+.bg_img_two{
+	    background: url(../GongGao/img/bg2.png) no-repeat;
+    width: 411px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    background-size: cover;
+}
+
+@media (max-width: 320px) {
+	.closebtn.closebtn_two {
+    position: absolute;
+    bottom: 10%;
+    left: 43.5%;
+    width: 15%;
+}
+.bg_img_two{
+	background: url(../GongGao/img/bg2.png) no-repeat;
+    width: 100%;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    background-size: 100% ;
+} 
+}
+@media (min-width: 321px) and (max-width: 640px) {
+
+.bg_img_two{
+	background: url(../GongGao/img/bg2.png) no-repeat;
+    width: 375px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+        background-size: contain;
+} 
+.closebtn.closebtn_two{
+	    position: absolute;
+    bottom: -15%;
+    left: 43.5%;
+    width: 15%;
+}
+</style>
+<body>
+	
+	<!--第一种背景图-->
+        <div class="advbox" >
+                <div class="advpic">
+                <div class="bg_img" >
+                	<div id="" class="advertising_text_one">
+                		<h3 id="">公告说明</h1>
+                			<div id="">
+                			点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明
+                			</div>
+                	</div>
+                	<div class="closebtn">
+                		<img src="../GongGao/img/close.png" alt="" />
+                	</div>
+                </div>
+                </div>
+           </div>
+           
+           
+  	<!--第二种背景图-->
+           <!-- <div class="advbox" >-->
+           <!--     <div class="advpic">-->
+           <!--     <div class="bg_img_two" >-->
+           <!--     	<div id="" class="advertising_text_two">-->
+           <!--     		<h3 id="">公告说明</h1>-->
+           <!--     			<div id="">-->
+           <!--     			点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明点击查看永久收藏和无法观看电影说明-->
+           <!--     			</div>-->
+           <!--     	</div>-->
+           <!--     	<div class="closebtn closebtn_two">-->
+           <!--     		<img src="../GongGao/img/close.png" alt="" />-->
+           <!--     	</div>-->
+           <!--     </div>-->
+           <!--     </div>-->
+           <!--</div>-->
+</body>
+ <script type="text/javascript" charset="utf-8">
+				$(document).ready(function() {
+				var COOKIE_NAME = "showbox";
+				if($.cookie(COOKIE_NAME)) {
+					$(".advbox").hide();
+				} else {
+					$(".advbox").show();
+                    $(".advbox").animate({top:"50%"},1000);
+					$(".closebtn").click(function() {
+					$(".advbox").fadeOut(500);
+				})
+				$.cookie(COOKIE_NAME, 'ishide', {
+                 expires: 1
+             }); //expires过期时间（单位为天！）
+          }
+        })
+ </script>
+</html>
