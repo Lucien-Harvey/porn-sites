@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="http://www.91king.xyz/Template/020hua/images/logo.ico" type="image/x-icon" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<title>{9CCMS:$WebTitle}</title>
+		<meta name="keywords" content="{9CCMS:$WebKeywords}" />
+		<meta name="description" content="{9CCMS:$WebDescription}" />
+		<link rel='stylesheet' id='main-css' href='{9CCMS:$StylePath}/css/style.css' type='text/css' media='all'>
+		<script type='text/javascript' src='{9CCMS:$StylePath}/js/jquery.js'></script>
+		<script type="text/javascript" src="{9CCMS:$StylePath}/js/jquery.SuperSlide.2.1.2.js"></script>
+		
+	</head>
+	<body class="home blog">
+		{9CCMS-include:Header}
+		<section class="container">
+			<div class="excerpts-wrapper">
+				<div class="excerpts">
+					<h2 class="multi">&nbsp;&nbsp;<i class="fa fa-thumbs-o-up"></i> <span class="title">{9CCMS-Index-Type:1}</span></h2>
+					{9CCMS-Index:Type=1,Count=9}
+					<article class="excerpt excerpt-c3">
+						<a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" class="thumbnail" href="{9CCMS-Index:DUrl}">
+							<img src="{9CCMS-Index:Pic}" data-src="{9CCMS-Index:Pic}" class="thumb"><i class="fa fa-play-circle-o"></i></a>
+						<a class="cat" href="{9CCMS-Index:DUrl}">{9CCMS-Index-Type:1}</a>
+						<h2><i class="fa fa-camera"></i> <a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" href="{9CCMS-Index:DUrl}">
+								<font color='FF00DE'>{9CCMS-Index:Name}</font>
+							</a></h2>
+						<footer>
+							<time class="hot"><i class="fa fa-thumbs-o-up"></i> 推荐</time>
+							<span class="ribbon" style="top:-146px;">评分：
+								<?php echo rand(5,9) ?>.
+								<?php echo rand(0,9) ?>分</span>
+						</footer>
+					</article>
+					{/9CCMS-Index}
+				</div>
+			</div>
+			<div class="excerpts-wrapper">
+				<div class="excerpts">
+					<h2 class="multi">&nbsp;&nbsp;<i class="fa fa-fire"></i> <span class="title">{9CCMS-Index-Type:2}</span></h2>
+					{9CCMS-Index:Type=2,Count=9}
+					<article class="excerpt excerpt-c3">
+						<a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" class="thumbnail" href="{9CCMS-Index:DUrl}">
+							<img src="{9CCMS-Index:Pic}" data-src="{9CCMS-Index:Pic}" class="thumb"><i class="fa fa-play-circle-o"></i></a>
+						<a class="cat" href="{9CCMS-Index:DUrl}">{9CCMS-Index-Type:2}</a>
+						<h2><i class="fa fa-camera"></i> <a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" href="{9CCMS-Index:DUrl}">
+								<font color='FF00DE'>{9CCMS-Index:Name}</font>
+							</a></h2>
+						<footer>
+							<time class="hot"><i class="fa fa-thumbs-o-up"></i> 推荐</time>
+							<span class="ribbon" style="top:-146px;">评分：
+								<?php echo rand(5,9) ?>.
+								<?php echo rand(0,9) ?>分</span>
+						</footer>
+					</article>
+					{/9CCMS-Index}
+				</div>
+			</div>
+			<div class="excerpts-wrapper">
+				<div class="excerpts">
+					<h2 class="multi">&nbsp;&nbsp;<i class="fa fa-fire"></i> <span class="title">{9CCMS-Index-Type:14}</span></h2>
+					{9CCMS-Index:Type=14,Count=9}
+					<article class="excerpt excerpt-c3">
+						<a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" class="thumbnail" href="{9CCMS-Index:DUrl}">
+							<img src="{9CCMS-Index:Pic}" data-src="{9CCMS-Index:Pic}" class="thumb"><i class="fa fa-play-circle-o"></i></a>
+						<a class="cat" href="{9CCMS-Index:DUrl}">{9CCMS-Index-Type:14}</a>
+						<h2><i class="fa fa-camera"></i> <a title="<font color='FF00DE'>{9CCMS-Index:Name}</font>" target="_blank" href="{9CCMS-Index:DUrl}">
+								<font color='FF00DE'>{9CCMS-Index:Name}</font>
+							</a></h2>
+						<footer>
+							<time class="hot"><i class="fa fa-thumbs-o-up"></i> 推荐</time>
+							<span class="ribbon" style="top:-146px;">评分：
+								<?php echo rand(5,9) ?>.
+								<?php echo rand(0,9) ?>分</span>
+						</footer>
+					</article>
+					{/9CCMS-Index}
+				</div>
+			</div>
+			<div class="pagination">
+				<ul></ul>
+			</div>
+		</section>
+		<div class="links">
+			<div class="links-txt text-center">
+				<div class="links-title">----- 友情链接 -----</div>
+				<ul class="list-unstyled list-inline">
+					{9CCMS-IeUrl}
+					<a class="text-muted" href="{9CCMS-IeUrl:Url}" title="{9CCMS-IeUrl:Name}" target="_blank">{9CCMS-IeUrl:Name}</a>
+					{/9CCMS-IeUrl}
+				</ul>
+			</div>
+		</div>
+		{9CCMS-include:Footer}
+	</body>
+</html>

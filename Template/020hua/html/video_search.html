@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="http://www.91king.xyz/Template/020hua/images/logo.ico" type="image/x-icon" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<title>{9CCMS:$WebTitle}-{9CCMS-Search-List:Title}-搜索结果页</title>
+		<meta name="keywords" content="{9CCMS:$WebKeywords},{9CCMS-Search-List:Title}" />
+		<meta name="description" content="{9CCMS:$WebDescription},{9CCMS-Search-List:Title}" />
+		<link rel='stylesheet' id='main-css' href='{9CCMS:$StylePath}/css/style.css' type='text/css' media='all'>
+		<script type='text/javascript' src='{9CCMS:$StylePath}/js/jquery.js'></script>
+	</head>
+	<body class="home blog">
+		{9CCMS-include:Header}
+		<section class="container">
+			<div class="excerpts-wrapper">
+				<div class="excerpts">
+					<h2 class="multi">&nbsp;&nbsp;<i class="fa fa-play-circle"></i> <span class="title">搜索内容：{9CCMS-Search-List:Title}</span></h2>
+					{9CCMS-Search-List:Count=9}
+					<article class="excerpt excerpt-c3">
+						<a title="<font color='FF00DE'>{9CCMS-Search-List:Name}</font>" target="_blank" class="thumbnail" href="{9CCMS-Search-List:DUrl}">
+							<img src="{9CCMS-Search-List:Pic}" data-src="{9CCMS-Search-List:Pic}" class="thumb"><i
+							 class="fa fa-play-circle-o"></i></a>
+						<a class="cat" href="{9CCMS-Search-List:DUrl}">{9CCMS-Search-List:Title}</a>
+						<h2><i class="fa fa-camera"></i> <a title="<font color='FF00DE'>{9CCMS-Search-List:Name}</font>" target="_blank" href="{9CCMS-Search-List:DUrl}">
+								<font color='FF00DE'>{9CCMS-Search-List:Name}"</font>
+							</a></h2>
+						<footer>
+							<time class="hot"><i class="fa fa-thumbs-o-up"></i> 推荐</time>
+							<span class="post-view"><i class="fa fa-eye"></i>
+							</span>
+							<span class="ribbon" style="top:-146px;">评分：<?php echo rand(5,9) ?>.<?php echo rand(0,9) ?>分</span>
+						</footer>
+					</article>
+					{/9CCMS-Search-List}
+				</div>
+			</div>
+			<div class="page5">
+				<a href="{9CCMS-Search-List:PageUrl}">首页</a>&nbsp;
+				<a href="{9CCMS-Search-List:prevUrl}">上一页</a>&nbsp;
+				<a href="{9CCMS-Search-List:nextUrl}">下一页</a>&nbsp;
+				<a href="{9CCMS-Search-List:totalUrl}">尾页</a>
+				</div>
+		</section>
+		{9CCMS-include:Footer}
+	</body>
+</html>

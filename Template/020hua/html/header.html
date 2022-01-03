@@ -1,0 +1,63 @@
+<link href="{9CCMS:$StylePath}/css/font-awesome.css" rel="stylesheet">
+<header class="header">
+			<div class="container">
+				<h1 class="logo"><a href="/" title="{9CCMS-Index:Name}"><img src="http://www.91king.xyz/Template/020hua/images/logo.png"><span>{9CCMS-Index:Name}</span></a></h1>
+				<div class="sitenav">
+					<ul>
+						<li class="<?php echo $this->value['thisPage'] === 'index' ? 'current-menu-item' : '' ?>"><a target="_blank" href="/" title="{9CCMS-Index:Name}"><i
+								 class="fa fa-home"></i> 首页</a></li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'video_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-play-circle"></i> 视频一区 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=1,2,3,4,5,6}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'video_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-film"></i> 视频二区 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=7,8,9,10,11,12}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'video_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-paper-plane"></i> 视频三区 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=13,14,15,16,17,18}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'book_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-folder-open"></i> 小说资源 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=19,20,21,22,23,24}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'pic_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-paper-plane"></i> 美图专区 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=25,26,27,28,29,30}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<li class="<?php echo strpos($_SERVER['QUERY_STRING'],'radio_list') !== false ? 'current-menu-item' : ' '; ?> <?php echo strpos($_SERVER['QUERY_STRING'],'bt_list') !== false ? 'current-menu-item' : ' '; ?>"><a target="_blank" href="#"> <i class="fa fa-paper-plane"></i> 电台种子 </a>
+							<ul class="sub-menu">
+								{9CCMS:Type=31,32,33,34,35,36}<li><a  href="{9CCMS:Url}">{9CCMS:Name}</a></li>{/9CCMS:Type}
+							</ul>
+						</li>
+						<!-- 请改为自已的或者“不写入缓存”就关闭了 （此说明内容可删除）-->
+					</ul>
+				</div>
+				<span class="sitenav-on"><i class="fa fa-navicon"></i>
+				</span> <span class="sitenav-mask"></span>
+				<span class="searchstart-on"><i class="fa fa-search"></i></span> <span class="searchstart-off"><i class="fa fa-remove"></i></span>
+				<form onsubmit="return checkSearchForm()" name="searchform" id="searchform" class="searchform">
+					<button tabindex="3" class="sbtn" type="submit"><i class="fa fa-search"></i></button>
+					<input tabindex="2" class="sinput" name="search" type="text" placeholder="输入关键字" value="">
+				</form>
+			</div>
+		</header>
+		<div class="fullSlide">
+			<div class="bd">
+				<ul>
+				{9CCMS-TAd}
+				<li style="list-style: none;"><a target="_blank"  href="{9CCMS-TAd:Url}" ><img style="width:{9CCMS-TAd:Width};height:{9CCMS-TAd:Height};margin-bottom:2px;" src="{9CCMS-TAd:Pic}"></a></li> 
+				{/9CCMS-TAd}
+				</ul>
+			</div>
+			<div class="hd">
+					<ul></ul>
+				</div>
+				<a class="prev" href="javascript:void(0)"></a><a class="next" href="javascript:void(0)"></a>
+			</div>
